@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-
     var slider = document.querySelector(".slider");
     var slides = document.querySelectorAll(".slide");
     var slideIndex = 0;
@@ -65,42 +64,14 @@ document.addEventListener("DOMContentLoaded", function () {
     // Función para manejar el evento scroll
     function handleScroll() {
         if (isElementInViewport(section)) {
-            section.style.animation = "sectionFadeIn 0.5s ease-in-out forwards";
+            section.style.animation = "sectionFadeIn 4s ease-in-out forwards";
             // Elimina el evento de desplazamiento después de mostrar la animación
             window.removeEventListener("scroll", handleScroll);
         }
     }
 
-    // Agrega el evento de desplazamiento para activar la animación
+    // Agrega el evento de desplazamiento
     window.addEventListener("scroll", handleScroll);
 
-    // Agrega un evento clic al enlace "Proyectos"
-    var proyectosLink = document.querySelector(".menu-item a[href='#proyectos']");
-
-    proyectosLink.addEventListener("click", function (e) {
-        e.preventDefault(); // Evita el comportamiento predeterminado del enlace
-
-        // Obtén la sección de proyectos por su ID
-        var proyectosSection = document.getElementById("proyectos");
-
-        // Desplázate suavemente hacia la sección de proyectos
-        proyectosSection.scrollIntoView({
-            behavior: "smooth",
-        });
-    });
-
-    // Agrega un evento clic al enlace "Trayectoria"
-    var trayectoriaLink = document.querySelector(".menu-item a[href='#trayectoria']");
-
-    trayectoriaLink.addEventListener("click", function (e) {
-        e.preventDefault(); // Evita el comportamiento predeterminado del enlace
-
-        // Obtén la sección de Trayectoria por su ID
-        var trayectoriaSection = document.getElementById("trayectoria");
-
-        // Desplázate suavemente hacia la sección de Trayectoria
-        trayectoriaSection.scrollIntoView({
-            behavior: "smooth",
-        });
-    });
+    // También, aquí puedes agregar más código JavaScript si es necesario para otras funcionalidades.
 });
